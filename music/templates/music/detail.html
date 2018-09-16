@@ -1,0 +1,69 @@
+{% extends 'music/base.html' %}
+{% block title %}Album Detail{% endblock %}
+
+{% block body %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col col-md-3">
+        <div class="card">
+            <a href="#"><img class="card-img-top list-img" src="{{album.album_logo}}" alt="image"></a>
+            <div class="card-body">
+              <h5 class="card-title">{{album.album_title}}<span class="text-muted genre">({{album.genre}})</span></h5>
+              <p class="card-text">{{album.artist}}</p>
+            </div>
+          </div>
+      </div>
+      <div class="col col-md-9">
+        <ul class="nav">
+          <li>
+            <button class="btn btn-primary">View All</button>
+          </li>
+          <li>
+              <button class="btn btn-primary" style="border: none; background-color: white; color: blue">Add New Song</button>
+          </li>
+        </ul>
+        <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Audio File</th>
+                <th scope="col">Favorite</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+  <!-- <img src="{{album.album_logo}}" alt="">
+  <h1>{{album.album_title}}</h1>
+  <h3>{{album.artist}}</h3>
+
+    {% for song in album.song_set.all %}
+      {{song.song_title}}
+      {% if song.is_favorite %}
+        <img src="http://i.imgur.com/b9b13Rd.png" alt="favorite " />
+      {% endif %}
+      <br>
+    {% endfor %} -->
+{% endblock %}

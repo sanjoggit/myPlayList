@@ -1,0 +1,13 @@
+{% extends 'music/base.html' %}
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <form method="post" enctype="multipart/form-data" class="album-form">
+            {% csrf_token %}
+            {% include 'music/form-template.html' %}
+            <button type="submit" class="btn btn-success">Add</button>
+        </form>        
+    </div>
+</div>
+    
+{% endblock %}

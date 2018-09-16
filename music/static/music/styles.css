@@ -1,0 +1,36 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+.list-img{
+  height: 30vh;
+  object-fit: cover;
+}
+.fa-star{
+  color: gray;
+}
+.container-fluid{
+  margin-top: 20px;
+}
+.genre{
+  font-size: 15px;
+}
+.table{
+  margin-top: 10px;
+}
+input{
+  width: 300px;
+  height: 40px;
+}
+.album-form{
+  margin-left: 20px;
+  padding: 20px;
+  border: 1px solid whitesmoke;
+}
+.card-foot{
+  display: flex
+}
+.card-foot > *{
+  margin-right: 5px;
+}
